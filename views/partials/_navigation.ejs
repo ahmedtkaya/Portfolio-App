@@ -1,0 +1,30 @@
+<nav class="tm-nav">
+    <ul>
+      <li class="<%= page_name === 'index' && 'active'%>">
+        <a href="/"><span class="tm-nav-deco"></span>Intro</a>
+      </li>
+      <li class="<%= page_name === 'gallery' && 'active'%>">
+        <a href="/gallery"><span class="tm-nav-deco"></span>Gallery</a>
+      </li>
+      <!-- 
+      <li class="<%= page_name === 'signup' && 'active'%>">
+        <a href="/signup"><span class="tm-nav-deco"></span>SignUp</a>
+      </li>
+      -->
+      <% if(userIN) { %>
+      <li class="<%= page_name === 'add' && 'active'%>">
+        <a href="/add"><span class="tm-nav-deco"></span>Add Post</a>
+      </li>
+      <%}%>
+      <% if(!userIN) { %>
+      <li class="<%= page_name === 'login' && 'active'%>">
+        <a href="/login"><span class="tm-nav-deco"></span>LogIn</a>
+      </li>
+      <%}%>
+      <% if(userIN) { %>
+      <li class="active">
+        <a href="user/logout"><span class="tm-nav-deco"></span>Logout</a>
+      </li>
+      <%}%>
+    </ul>
+  </nav>
