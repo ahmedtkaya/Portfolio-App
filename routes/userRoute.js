@@ -2,6 +2,7 @@
 
 const express = require("express");
 const authController = require("../controllers/authController");
+const redirectMiddleware = require("../middlewares/redirectMiddleware");
 
 const router = express.Router();
 

@@ -20,11 +20,11 @@
               <% for (i=0;i < portfolios.length; i++) { %>
               <div class="col-sm-6 tm-gallery-item">
                 <figure class="effect-bubba">
-                  <img src="img/gallery/gallery-img-01.jpg" alt="Gallery item" class="img-fluid" />
+                  <img src="<%= portfolios[i].image %>" alt="Gallery item" class="img-fluid" />
                   <figcaption>
                     <h2><%= portfolios[i].name%></h2>
                     <p><%= portfolios[i].description%></p>
-                    <a href="img/gallery/gallery-img-01.jpg">View more</a>
+                    <a href="/portfolios/<%= portfolios[i]._id %>">View more</a>
                   </figcaption>
                 </figure>
               </div>
@@ -39,21 +39,7 @@
     <%- include('partials/_footer.ejs') %>
   </div>
 
-  <script src="js/jquery-3.4.1.min.js"></script>
-  <script src="js/jquery.magnific-popup.min.js"></script>
-  <script>
-    $(document).ready(function () {
-      // Magnific Pop up
-      // https://dimsemenov.com/plugins/magnific-popup/
-      $('.tm-gallery').magnificPopup({
-        delegate: 'a', // child items selector, by clicking on it popup will open
-        type: 'image',
-        gallery: {
-          enabled: true
-        },
-      });
-    });
-  </script>
+  <script src="/js/jquery-3.4.1.min.js"></script>
+  <script src="/js/jquery.magnific-popup.min.js"></script>
+  
 
-</body>
-</html>
