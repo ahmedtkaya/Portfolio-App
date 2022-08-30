@@ -55,7 +55,7 @@ exports.getAllPortfolio = async (req, res) => {
 };
 
 exports.getPortfolio = async (req, res) => {
-  const portfolio = await Portfolio.findById(req.params.id);
+  const portfolio = await Portfolio.findById(req.params.id); //buradaki portfolio, portfolio.ejs içindeki <% içindeki değişken
   res.render("portfolio", {
     portfolio,
     page_name: "portfolio",

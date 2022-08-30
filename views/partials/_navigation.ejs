@@ -6,6 +6,9 @@
       <li class="<%= page_name === 'gallery' && 'active'%>">
         <a href="/gallery"><span class="tm-nav-deco"></span>Portfolio</a>
       </li>
+      <li class="<%= page_name === 'contact' && 'active'%>">
+        <a href="/contact"><span class="tm-nav-deco"></span>Contact</a>
+      </li>
       <!-- 
       <li class="<%= page_name === 'signup' && 'active'%>">
         <a href="/signup"><span class="tm-nav-deco"></span>SignUp</a>
@@ -17,7 +20,7 @@
       </li>
       <%}%>
       <% if(!userIN) { %>
-      <li class="<%= page_name === 'login' && 'active'%>">
+      <li class="<%= page_name === 'login' && 'active'%>" hidden=''>
         <a href="/login"><span class="tm-nav-deco"></span>LogIn</a>
       </li>
       <%}%>
